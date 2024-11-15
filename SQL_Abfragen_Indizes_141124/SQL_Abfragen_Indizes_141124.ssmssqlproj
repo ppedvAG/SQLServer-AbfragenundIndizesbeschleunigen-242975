@@ -64,11 +64,77 @@
           <AssociatedConnUserName />
           <FullPath>06_Indizes.sql</FullPath>
         </FileNode>
+        <FileNode Name="07_MAXDOP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>07_MAXDOP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="08_SQLServerProfiler.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>08_SQLServerProfiler.sql</FullPath>
+        </FileNode>
+        <FileNode Name="09_JOIN Arten.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>09_JOIN Arten.sql</FullPath>
+        </FileNode>
+        <FileNode Name="10_LogScout.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>10_LogScout.sql</FullPath>
+        </FileNode>
+        <FileNode Name="11_SQLNexus.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>11_SQLNexus.sql</FullPath>
+        </FileNode>
+        <FileNode Name="12_RML.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>12_RML.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IndizesUebung.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>IndizesUebung.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IndizTest.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>IndizTest.sql</FullPath>
+        </FileNode>
+        <FileNode Name="LastUebung.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LastUebung.sql</FullPath>
+        </FileNode>
         <FileNode Name="UebungPartition.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>UebungPartition.sql</FullPath>
+        </FileNode>
+        <FileNode Name="WdhPTCompression.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>WdhPTCompression.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Wiederholung.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN11-PL2\SQLKURS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN11-PL2\SQLKURS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Wiederholung.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

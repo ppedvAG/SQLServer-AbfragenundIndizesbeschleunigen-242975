@@ -52,3 +52,66 @@ FROM sys.dm_db_index_physical_stats(DB_ID(), 0, -1, 0, 'DETAILED')
 SELECT CompanyName, ContactName, ProductName, QUantity * UnitPrice
 FROM M005_Index
 WHERE ProductName = 'Chocolade'
+-- Cost: 21,09 , Logische Lesevorgänge: 28265, CPU-Zeit = 220ms, verstrichene Zeit = 106ms
+
+SELECT CompanyName, ContactName, ProductName, QUantity * UnitPrice
+FROM M005_Index
+WHERE ProductName = 'Chocolade'
+-- Cost: 0,02 , Logische Lesevorgänge: 26, CPU-Zeit = 16ms, verstrichene Zeit = 94ms
+
+-- Hier wird auch NCIX_ProductName durchgegangen
+-- Hier fehlt die CompanyName Spalte
+SELECT CompanyName, ProductName, QUantity * UnitPrice
+FROM M005_Index
+WHERE ProductName = 'Chocolade'
+
+-- Hier wird NCIX_ProductName teils durchgegangen
+-- Alle Included Columns werden geholt + ein Lookup auf die fehlenden Dten gemacht
+SELECT CompanyName, ProductName, QUantity * UnitPrice, CompanyName, Freight
+FROM M005_Index
+WHERE ProductName = 'Chocolade'
+-- Cost: 4,94, logische Lesevorgänge: 1562, CPU-Zeit = 0ms, verstrichene Zeit = 95ms
+
+-- Indizierte Sicht
+-- View mit Index
+-- Benötigt SCHEMABINDING
+-- WITH SCHEMABINDING: Solange die View existiert, kann die Tabellenstruktur nicht geändert werden
+
+ALTER TABLE M005_Index ADD id int identity
+GO
+
+SELECT * FROM M005_Index
+GO
+
+CREATE VIEW Adressen_Test WITH SCHEMABINDING
+AS
+SELECT id, CompanyName, Address, City, Region, PostalCode, Country
+FROM dbo.M005_Index
+
+SELECT * FROM Adressen_Test
+
+
+-- Clustered Index Insert
+INSERT INTO M005_Index (CompanyName, Address, City, Region, PostalCode, Country, CustomerID, OrderID, EmployeeID)
+VALUES('PPEDV', 'Eine Straße', 'Irgendwo', NULL, NULL, NULL, 'PPEDV', 1023)
+
+CREATE TABLE M005_InsertTest
+(
+	id int identity,
+	CompanyName nvarchar(40),
+	Address nvarchar(60),
+	City nvarchar(15),
+	Region nvarchar(15),
+	PostalCode nvarchar(10),
+	Country nvarchar(15)
+)
+
+INSERT INTO M005_InsertTest 
+SELECT id, CompanyName, Address, City, Region, PostalCode, Country
+FROM dbo.M005_Index
+
+
+SELECT * FROM M005_InsertTest
+
+INSERT INTO M005_InsertTest (CompanyName, Address, City, Region, PostalCode, Country)
+VALUES('PPEDV', 'Eine Straße', 'Irgendwo', NULL, NULL, NULL)
